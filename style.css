@@ -112,7 +112,7 @@ header{
 }
 
 
-/* --------------------------------- inicio menú colpasado --------------------------------- */
+/* --------------------------------- Estilos menú colpasado --------------------------------- */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -159,7 +159,7 @@ header{
     background-color: var(--blanco);
 }
 
-/* ------------------------------------------ Fin menú ---------------------------- */
+/* ------------------------------------------ Estilos de las cajas ---------------------------- */
 
 .logo{
     min-height: 5rem;
@@ -307,8 +307,9 @@ footer{
         font-size: 1rem;
     }
     .dropdown-content a:hover{
-        font-size: 1.4rem;
-        transition: 2s;
+        font-size: 1.2rem;
+        transition-duration: 1s;
+        /*transform: scaleY(1.2);*/
     }
     h1{
         font-size: 2.75rem;
