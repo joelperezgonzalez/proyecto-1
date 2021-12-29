@@ -309,7 +309,7 @@ footer{
     .dropdown-content a:hover{
         font-size: 1.2rem;
         transition-duration: 1s;
-        /*transform: scaleY(1.2);*/
+        transform: scaleY(1.2);
     }
     h1{
         font-size: 2.75rem;
