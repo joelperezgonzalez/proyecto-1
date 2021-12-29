@@ -1,0 +1,333 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --rojo:#d03b40;
+    --beige:#ded6c0;
+    --blanco:#f5f0ed;
+    --gris:#241d1b;
+
+    --textClaro:#f5f0ed;
+    --textOscuro:#3c3c3b;
+}
+
+/* Fuentes del proyecto */
+body{
+    font-family: 'Krub', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+
+img{
+    width: 100%;
+}
+
+hr{
+    width: 30%;
+    margin: 1rem auto;
+    min-height: 0.1rem;
+    background-color: var(--blanco);
+}
+
+h1{
+    font-size: 1.75rem;
+}
+
+h2{
+    font-size: 1.3rem;
+}
+
+p{
+    font-size: 1rem;
+    margin: 1rem auto;
+}
+
+h4{
+    border: 0.2rem solid var(--blanco);
+    padding:0.5rem;
+}
+
+a{
+    font-size: 0.7rem;
+}
+
+a:hover{
+    font-size: 0.8rem;
+}
+
+.icono{
+    border-radius: 5rem;
+    width: 5rem;
+}
+
+.ancla a{
+    text-decoration: none;
+    color: var(--textClaro);
+}
+
+/* ------------------------------------ Creando el Grid --------------------------------- */
+main{
+    display:grid;
+    min-height: 100vh;
+
+    grid-template-areas:
+    "header"
+    "domingos"
+    "nosotros"
+    "desayunar"
+    "pan"
+    "tarta"
+    "prueba"
+    "ingredientes"
+    "footer"
+    ;
+
+    grid-template-columns: 1 1fr;
+}
+
+/* Declaro los Grid Area */
+header{grid-area: header;}
+.domingos{grid-area: domingos;}
+.nosotros{grid-area: nosotros;}
+.desayunar{grid-area: desayunar;}
+.pan{grid-area: pan;}
+.tarta{grid-area: tarta;}
+.prueba{grid-area: prueba;}
+.ingredientes{grid-area: ingredientes;}
+footer{grid-area: footer;}
+
+/* -------------------------------------- Estilos de la cabecera ----------------------------- */
+header{
+    min-height: 50vh;
+    background-image: url("img/Fondo1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contenedor{
+    display:flex;
+    justify-content: space-between;
+}
+
+
+/* --------------------------------- Estilos menú colapsado --------------------------------- */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 1rem 1rem 0 auto;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute; /* Posiciona el elemento al lado del otro elemento con posiction relative anterior (.dropdown) */
+    min-width: 20rem;
+    background-color: rgba(255,255,255,0.8);
+    color: var(--rojo);
+    font-weight: 700;
+    z-index: 1; /* Dar prioridad al elemento para que se muestre sobre otros */
+    overflow: hidden;
+  }
+  
+  .dropdown-content a {
+    display: block;
+    text-decoration: none;
+    color: var(--rojo);
+    padding: 0.5rem;
+  }
+  
+  /* Mostar el menú colapsado al pasar el cursor */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropbtn{
+    min-height: 3rem;
+    min-width: 3rem;
+    margin:0.4rem 0.4rem;
+    padding: 0.15rem;
+    border: none;
+    background-color: var(--rojo);
+    cursor: pointer;
+  }
+
+  /* MENU */
+.parrilla-menu{
+    margin:0.4rem 0.4rem;
+    padding: 0.15rem;
+    background-color: var(--blanco);
+}
+
+/* ------------------------------------------ Estilos de las cajas ---------------------------- */
+
+.logo{
+    min-height: 5rem;
+    width: 50%;
+    margin: 1rem auto 0 2rem;
+    background-image: url("img/Logo.png");
+    background-repeat: no-repeat;
+}
+
+.encabezado{
+    width: 100%;
+    min-height: 20rem;
+    padding: 0.5rem;
+    margin:auto;
+    text-align: center;
+    color: var(--textClaro);
+}
+
+.domingos{
+    width: 100%;
+    min-height: 18rem;
+    padding: 2rem;
+    margin: auto;
+    text-align: center;
+    color: var(--textClaro);
+    background-color: var(--rojo);
+}
+
+.nosotros{
+    width: 100%;
+    min-height: 18rem;
+    padding: 2rem;
+    margin:auto;
+    text-align: center;
+    color: var(--rojo);
+    background-color: var(--blanco);
+    overflow: hidden;
+}
+
+.desayunar{
+    width: 100%;
+    min-height: 20rem;
+    padding: 2rem;
+    margin:auto;
+    text-align: center;
+    color: var(--textClaro);
+    background-image: url("img/Fondo2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.descubre{
+    width: 50%;
+    margin: 5rem auto;
+    border: 0.1rem;
+    padding: 2rem;
+}
+
+.pan{
+    width: 100%;
+    min-height: 15rem;
+    padding: 2rem;
+    margin: 0 auto; /* margin 0 (arriba y abajo) evita espacios en blanco entre contenedores */
+    text-align: center;
+    color: var(--textOscuro);
+    background-color: var(--blanco);
+}
+
+.tarta{
+    width: 100%;
+    min-height: 15rem;
+    padding: 2rem;
+    margin: 0 auto; /* margin 0 (arriba y abajo) evita espacios en blanco entre contenedores */
+    text-align: center;
+    color: var(--textOscuro);
+    background-color: var(--blanco);
+}
+
+.prueba{
+    width: 100%;
+    min-height: 18rem;
+    padding: 2rem;
+    margin: 0 auto; /* margin 0 (arriba y abajo) evita espacios en blanco entre contenedores */
+    text-align: center;
+    color: var(--textOscuro);
+    background-color: var(--blanco);
+}
+
+.ingredientes{
+    width: 100%;
+    min-height: 18rem;
+    padding: 2rem;
+    margin: 0 auto; /* margin 0 (arriba y abajo) evita espacios en blanco entre contenedores */
+    text-align: center;
+    color: var(--textOscuro);
+    background-color: var(--blanco);
+}
+
+footer{
+    width: 100%;
+    min-height: 1rem;
+    padding: 0.5rem;
+    margin:auto;
+    text-align: center;
+    color: var(--textClaro);
+    background-color: var(--gris);
+}
+
+/* VISTA ESCRITORIO */
+@media(min-width:923px){
+    main{
+        display:grid;
+        min-height: 100vh;
+    
+        grid-template-areas:
+        "header header"
+        "domingos nosotros"
+        "desayunar desayunar"
+        "pan tarta"
+        "prueba ingredientes"
+        "footer footer"
+        ;
+    }
+    .encabezado{
+        width: 50%;
+    }
+    .desayunar2{
+        width: 50%;
+        margin: auto;
+    }
+    .dropdown{
+        margin: 1rem 2rem 0 auto;
+    }
+    .dropbtn{
+        display: none;
+    }
+    .dropdown-content{
+        display:inline-block;
+        position: relative; /* Lo cambio a position relative para que se muestre */
+        background-color: transparent; /* Le elimino el color de fondo */
+    }
+    .dropdown-content a{
+        color:var(--blanco);
+        display: inline-block;
+        font-size: 1rem;
+    }
+    .dropdown-content a:hover{
+        font-size: 1.2rem;
+        transition-duration: 1s;
+        /*transform: scaleY(1.2);*/
+    }
+    h1{
+        font-size: 2.75rem;
+    }
+    
+    h2{
+        font-size: 1.75rem;
+    }
+    
+    p{
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+
+ 
